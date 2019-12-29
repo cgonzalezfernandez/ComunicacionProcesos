@@ -28,19 +28,31 @@ public class HijoAleatorio {
 	    	BufferedReader br = new BufferedReader(ipr);
 	    	PrintStream ps = new PrintStream(hijo.getOutputStream());
 	    	try {	
-	    	System.out.println("Introduce el valor superior del intervalo \n");
+	    	System.out.println("Introduce una letra para continuar, 'fin' para acabar \n");
 	        String stuff;
 	        stuff = entrada.nextLine();
-	        ps.println(stuff);
-	        ps.flush(); //Obliga a pintar la salida
+	        
+	        //Compromabos si el usuario ha introducido la cadena fin.
+	        if(!(stuff.equalsIgnoreCase("fin"))) {
 	        String line1;
+	        System.out.println("introduce el valor superior del intervalo");
+	        Scanner numero_temporal=new Scanner(System.in);
+	        int numero = numero_temporal.nextInt();
+	        ps.println(numero);
+	        ps.flush(); //Obliga a pintar la salida
 	        while((line1 = br.readLine()) != null ) {
+	        	
 	        	System.out.println(line1);
 	        	}
 	        	hijo.destroy();
+	        }else {
+	        	
+	        	System.out.println("Se acabó el proceso");
+	        }
     	} catch (IOException e) {
     		
     		System.out.println("Error ocurrió ejecutanto el comando....." + e.getMessage());
+    		System.exit(-1);
     		
     	}
     }
