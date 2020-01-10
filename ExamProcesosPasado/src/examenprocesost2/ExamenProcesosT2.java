@@ -29,6 +29,7 @@ public class ExamenProcesosT2 {
                 String line1;
                 while((line1 = br.readLine()) != null ) {System.out.println(line1);}
                 pro.destroy();
+    entrada.close();
     }
     public static void notanhonesto() throws IOException{
     Scanner entrada = new Scanner(System.in); 
@@ -45,6 +46,7 @@ public class ExamenProcesosT2 {
                 String line1;
                 while((line1 = br.readLine()) != null ) {System.out.println(line1);}
                 pro.destroy();
+    entrada.close();  
     }  
     public static void main(String[] args) throws IOException { 
         String whatever;
@@ -57,6 +59,8 @@ public class ExamenProcesosT2 {
             else if(whatever.equals("derecha")){notanhonesto();}
             else if (whatever.equals("derecha")){System.out.println("¿Ya te rindes?");}
             else{System.out.println("No es una opcion correcta");}   
-        }while(!whatever.equals("fin"));   
+        }while(!whatever.equals("fin")); 
+        entrada.close();
     }   
 }
+//Buenos dias, soy Jesus Gonzalez-EStefani
