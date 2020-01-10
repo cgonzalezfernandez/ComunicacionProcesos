@@ -37,7 +37,7 @@ public class ExamenProcesosT2 {
 		InputStreamReader isr = new InputStreamReader(is);
 		BufferedReader br = new BufferedReader(isr);
 		PrintStream ps = new PrintStream(pro.getOutputStream());           
-                System.out.println("¿Que numero desea comprobar, mi buen señor?");
+                System.out.println("¿Que numero desea comprobar?");
                 String stuff;
                 stuff = entrada.nextLine();
                 ps.println(stuff);
@@ -60,3 +60,4 @@ public class ExamenProcesosT2 {
         }while(!whatever.equals("fin"));   
     }   
 }
+//testeando con git
