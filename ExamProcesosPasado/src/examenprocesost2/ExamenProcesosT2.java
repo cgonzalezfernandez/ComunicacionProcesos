@@ -60,3 +60,5 @@ public class ExamenProcesosT2 {
         }while(!whatever.equals("fin"));   
     }   
 }
+
+//HOla buenas lo he solucionao to 
